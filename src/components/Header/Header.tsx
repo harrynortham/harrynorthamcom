@@ -28,6 +28,7 @@ export default function Header() {
                             <Link href="/about">About</Link>
                             <Link href="/experience">Experience</Link>
                             <Link href="/projects">Projects</Link>
+                            <Link href="/blog">Blog</Link>
                             <Link href="/contact"><Button className="text-base">Contact <IoMailOutline /></Button></Link>
                         </div>
                     </div>
@@ -47,8 +48,12 @@ export default function Header() {
                                     <Link href="/about">About</Link>
                                     <Link href="/experience">Experience</Link>
                                     <Link href="/projects">Projects</Link>
+                                    <Link href="/blog">Blog</Link>
                                     <Link href="/contact"><Button className="text-base">Contact <IoMailOutline /></Button></Link>
                                 </div>
+                                <div
+                                    className={`${poetsenone.className} font-extrabold text-xl flex justify-center mt-12`}
+                                >{'<Northam />'}</div>
                             </SheetContent>
                         </Sheet>
 
