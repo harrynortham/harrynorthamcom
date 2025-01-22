@@ -8,6 +8,7 @@ import {
     SheetTrigger,
 } from "@/components/ui/sheet"
 import { IoMenu } from "react-icons/io5";
+import { poetsenone } from '@/app/ui/fonts';
 
 
 export default function Header() {
@@ -15,13 +16,17 @@ export default function Header() {
         <div className="header ">
             <div className="mx-auto max-w-7xl p-4 flex justify-between">
 
-                <div className="logo font-extrabold text-lg flex justify-center">{'<Northam />'}</div>
-                <div className="navigation">
-                    <div className="navigation-desktop space-x-8 hidden md:flex">
-                        <Link href="#">About</Link>
-                        <Link href="#">Experience</Link>
-                        <Link href="#">Projects</Link>
-                        <Link href="#">Contact</Link>
+                <div
+                    className={`${poetsenone.className} logo font-extrabold text-xl flex justify-center`}
+                >{'<Northam />'}</div>
+                <div className="navigation flex justify-center">
+                    <div className="navigation-desktop hidden md:flex md:justify-center">
+                        <div className="space-x-8 translate-y-0.5">
+                            <Link href="#">About</Link>
+                            <Link href="#">Experience</Link>
+                            <Link href="#">Projects</Link>
+                            <Link href="#">Contact</Link>
+                        </div>
                     </div>
                     <div className="navigation-mobile flex justify-center md:hidden">
                         <Sheet>
