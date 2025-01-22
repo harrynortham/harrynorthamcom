@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Button } from "../ui/button";
 import {
     Sheet,
     SheetContent,
@@ -8,7 +9,9 @@ import {
     SheetTrigger,
 } from "@/components/ui/sheet"
 import { IoMenu } from "react-icons/io5";
-import { poetsenone } from '@/app/ui/fonts';
+import { poetsenone } from '@/components/ui/fonts';
+import { IoMailOutline } from "react-icons/io5";
+
 
 
 export default function Header() {
@@ -18,14 +21,14 @@ export default function Header() {
 
                 <div
                     className={`${poetsenone.className} logo font-extrabold text-xl flex justify-center`}
-                >{'<Northam />'}</div>
+                ><Link href="/">{'<Northam />'}</Link></div>
                 <div className="navigation flex justify-center">
                     <div className="navigation-desktop hidden md:flex md:justify-center">
                         <div className="space-x-8 translate-y-0.5">
-                            <Link href="#">About</Link>
-                            <Link href="#">Experience</Link>
-                            <Link href="#">Projects</Link>
-                            <Link href="#">Contact</Link>
+                            <Link href="/about">About</Link>
+                            <Link href="/experience">Experience</Link>
+                            <Link href="/projects">Projects</Link>
+                            <Link href="/contact"><Button className="text-base">Contact <IoMailOutline /></Button></Link>
                         </div>
                     </div>
                     <div className="navigation-mobile flex justify-center md:hidden">
@@ -41,10 +44,10 @@ export default function Header() {
                                     </SheetHeader>
                                 </div>
                                 <div className="flex flex-col space-y-4 mt-6">
-                                    <Link href="#">About</Link>
-                                    <Link href="#">Experience</Link>
-                                    <Link href="#">Projects</Link>
-                                    <Link href="#">Contact</Link>
+                                    <Link href="/about">About</Link>
+                                    <Link href="/experience">Experience</Link>
+                                    <Link href="/projects">Projects</Link>
+                                    <Link href="/contact"><Button className="text-base">Contact <IoMailOutline /></Button></Link>
                                 </div>
                             </SheetContent>
                         </Sheet>
