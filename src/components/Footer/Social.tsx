@@ -1,10 +1,10 @@
 import Link from "next/link"
-import { FaLinkedinIn } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa6";
 
 
 const socialLinks = [
@@ -13,7 +13,7 @@ const socialLinks = [
     { name: "X", icon: FaXTwitter, url: "https://x.com/harrynortham" },
     { name: "YouTube", icon: FaYoutube, url: "https://www.youtube.com/@harrynortham" },
     { name: "TikTok", icon: FaTiktok, url: "https://tiktok.com/@harrynorthamcom" },
-    { name: "LinkedIn", icon: FaLinkedinIn, url: "https://www.linkedin.com/in/harrynortham" },
+    { name: "GitHub", icon: FaGithub, url: "https://www.github.com/harrynortham" },
 ]
 
 export default function Social() {
