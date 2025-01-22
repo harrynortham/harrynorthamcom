@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Harry Northam",
-  description: "An experienced web developer showcasing professional work, technical expertise, and latest projects. Discover my development philosophy, skills, and journey in creating impactful digital solutions.",
+  title: "Harry Northam - Web developer in Gibraltar",
+  description: "An experienced web developer in Gibraltar showcasing professional work, technical expertise, and latest projects. Discover my development philosophy, skills, and my journey.",
 };
 
 export default function RootLayout({
