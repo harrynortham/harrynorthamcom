@@ -16,7 +16,7 @@ export default function Home() {
       </div>
 
       <div className="intro-text py-8 max-w-2xl">
-        <div className={`${poetsenone.className} intro font-extrabold text-4xl`}><h1>Hello, I&apos;m Harry 👋</h1></div>
+        <h1 className={`${poetsenone.className} intro text-4xl`}>Hello, I&apos;m Harry 👋</h1>
         <div className="description mt-4 text-pretty">A web developer in Gibraltar with high level experience in Front-End within the iGaming industry. Producing quality work, crafting digital journeys that captivate users.  </div>
         <div className="role mt-4 text-balance">Currently working at <Link target="_blank" rel="noopener" className="underline" href="https://digibeat.com/">Digibeat</Link> as Senior Web Operations Manager</div>
 
