@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Harry Northam",
     short_name: "Harry Northam",
-    description: "Web developer in Gibraltar",
+    description: "Harry Northam",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",
