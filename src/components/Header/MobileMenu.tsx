@@ -24,7 +24,7 @@ export default function MobileMenu() {
 
         <div className="navigation-mobile flex justify-center md:hidden">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
-                <SheetTrigger >
+                <SheetTrigger className="focus-visible:outline-none">
                     <IoMenu className="h-7 w-7" />
                     <span className="sr-only">Menu</span>
                 </SheetTrigger>
