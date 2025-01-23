@@ -41,10 +41,10 @@ export default function MobileMenu() {
                         <Link href="/experience" onClick={handleLinkClick}>Experience</Link>
                         <Link href="/projects" onClick={handleLinkClick}>Projects</Link>
                         <Link href="/blog" onClick={handleLinkClick}>Blog</Link>
-                        <Link href="/contact" onClick={handleLinkClick}>
-                            <Button size="lg" className="text-base">Contact <IoMailOutline /></Button>
-                        </Link>
                     </div>
+                    <div className="mt-8"><Link href="/contact" onClick={handleLinkClick}>
+                        <Button size="lg" className="text-base w-full">Contact <IoMailOutline /></Button>
+                    </Link></div>
                     <div
                         className={`${poetsenone.className} font-extrabold text-xl flex justify-center mt-12`}
                     >{'<Northam />'}</div>
