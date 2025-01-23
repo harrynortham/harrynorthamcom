@@ -14,7 +14,7 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "Harry Northam - Web developer in Gibraltar",
   description:
-    "An experienced web developer in Gibraltar showcasing professional work, technical expertise, and latest projects. Discover my development philosophy, skills, and my journey.",
+    "An experienced web developer in Gibraltar showcasing professional work, technical expertise, and latest projects. Discover my development philosopshy, skills, and my journey.",
 }
 
 export default function RootLayout({
