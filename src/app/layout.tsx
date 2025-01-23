@@ -5,6 +5,7 @@ import Footer from "@/components/Footer"
 import { GoogleAnalytics } from "@next/third-parties/google"
 import { Roboto } from 'next/font/google'
 
+
 const roboto = Roboto({
   weight: '400',
   subsets: ['latin'],
@@ -34,7 +35,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} flex flex-col min-h-dvh`}>
+      <body className={`${roboto.className} flex flex-col min-h-dvh `}>
+
         <Header />
         {children}
         <Footer />

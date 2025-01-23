@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
 
-import { IoMailOutline } from "react-icons/io5";
+
 import { poetsenone } from '@/components/ui/fonts';
 
 import MobileMenu from "./MobileMenu";
@@ -28,7 +28,7 @@ export default function Header() {
                             <Link href="/blog"><Button variant="ghost" className="text-base">Blog</Button></Link>
                         </div>
                         <Link className="ml-6" href="/contact">
-                            <Button className="text-base">Contact <IoMailOutline /></Button>
+                            <Button className="text-base">Contact</Button>
                         </Link>
                     </div>
 

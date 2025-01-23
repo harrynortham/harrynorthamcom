@@ -10,7 +10,7 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
-import { IoMenu, IoMailOutline } from "react-icons/io5";
+import { IoMenu } from "react-icons/io5";
 import { poetsenone } from '@/components/ui/fonts';
 
 
@@ -44,7 +44,7 @@ export default function MobileMenu() {
                         <Link className="active:bg-neutral-100 py-2 px-4" href="/blog" onClick={handleLinkClick}>Blog</Link>
                     </div>
                     <div className="mt-12"><Link href="/contact" onClick={handleLinkClick}>
-                        <Button size="lg" className="text-base w-full">Contact <IoMailOutline /></Button>
+                        <Button size="lg" className="text-base w-full">Contact</Button>
                     </Link></div>
                     <div
                         className={`${poetsenone.className} font-extrabold text-xl flex justify-center mt-12`}
