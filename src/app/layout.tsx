@@ -10,13 +10,21 @@ const roboto = Roboto({
   subsets: ['latin'],
 })
 
-
 export const metadata: Metadata = {
   title: {
     template: `%s | Harry Northam`,
     default: `Harry Northam | Web developer in Gibraltar`,
   },
   description: "An experienced web developer in Gibraltar showcasing professional work, technical expertise, and latest projects. Discover my development philosopshy, skills, and my journey.",
+  icons: {
+    apple: '/apple-touch-icon.png',
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icon.svg', sizes: 'any', type: 'image/svg+xml' },
+    ],
+  },
+
 };
 
 export default function RootLayout({
