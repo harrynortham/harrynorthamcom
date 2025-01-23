@@ -42,7 +42,7 @@ export default function MobileMenu() {
                         <Link href="/projects" onClick={handleLinkClick}>Projects</Link>
                         <Link href="/blog" onClick={handleLinkClick}>Blog</Link>
                         <Link href="/contact" onClick={handleLinkClick}>
-                            <Button className="text-base">Contact <IoMailOutline /></Button>
+                            <Button size="lg" className="text-base">Contact <IoMailOutline /></Button>
                         </Link>
                     </div>
                     <div
