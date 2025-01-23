@@ -1,4 +1,10 @@
 import { poetsenone } from '@/components/ui/fonts';
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "About",
+    description: "Harry Northam, a passionate web developer based in Gibraltar, delivers cutting-edge digital solutions with expert coding skills, driving user engagement.",
+};
 
 export default function About() {
     return (

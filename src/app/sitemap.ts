@@ -32,5 +32,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 1,
     },
+    {
+      url: "https://www.harrynortham.com/blog",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 1,
+    },
   ];
 }

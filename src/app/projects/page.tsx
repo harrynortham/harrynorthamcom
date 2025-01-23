@@ -1,4 +1,10 @@
 import { poetsenone } from '@/components/ui/fonts';
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Projects",
+    description: "Media maverick unleashing jaw-dropping digital projects that redefine online creativity—peek inside my innovation workshop and get ready for innovation! ",
+};
 
 export default function Projects() {
     return (

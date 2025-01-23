@@ -1,4 +1,10 @@
 import { poetsenone } from '@/components/ui/fonts';
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Contact",
+    description: "Drop me a message to say hello, or get in contact with any enquiries, or collaboration requests. I'm always excited to connect with new people and help.",
+};
 
 export default function Contact() {
     return (
