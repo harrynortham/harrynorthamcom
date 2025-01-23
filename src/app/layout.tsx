@@ -13,9 +13,9 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: {
     template: `%s | Harry Northam`,
-    default: `Harry Northam | Web developer in Gibraltar`,
+    default: `Harry Northam | Web Developer in Gibraltar`,
   },
-  description: "An experienced web developer in Gibraltar showcasing professional work, technical expertise, and latest projects. Discover my development philosopshy, skills, and my journey.",
+  description: "An experienced Front End Developer showcasing professional work, technical expertise, and latest projects. Discover my development philosophy, skills, and my journey.",
   icons: {
     apple: '/apple-touch-icon.png',
     icon: [
