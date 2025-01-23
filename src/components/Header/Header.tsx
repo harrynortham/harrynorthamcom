@@ -21,15 +21,15 @@ export default function Header() {
                 </div>
                 <div className="navigation flex justify-center">
                     <div className="navigation-desktop hidden md:flex md:justify-center">
-                        <div className="space-x-8 translate-y-0.5">
-                            <Link href="/about">About</Link>
-                            <Link href="/experience">Experience</Link>
-                            <Link href="/projects">Projects</Link>
-                            <Link href="/blog">Blog</Link>
-                            <Link href="/contact">
-                                <Button className="text-base">Contact <IoMailOutline /></Button>
-                            </Link>
+                        <div className="space-x-2 translate-y-0.5">
+                            <Link href="/about"><Button variant="ghost" className="text-base">About</Button></Link>
+                            <Link href="/experience"><Button variant="ghost" className="text-base">Experience</Button></Link>
+                            <Link href="/projects"><Button variant="ghost" className="text-base">Projects</Button></Link>
+                            <Link href="/blog"><Button variant="ghost" className="text-base">Blog</Button></Link>
                         </div>
+                        <Link className="ml-6" href="/contact">
+                            <Button className="text-base">Contact <IoMailOutline /></Button>
+                        </Link>
                     </div>
 
 

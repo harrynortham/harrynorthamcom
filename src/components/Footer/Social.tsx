@@ -28,7 +28,7 @@ export default function Social() {
                     className="group"
                     aria-label={`Visit our ${social.name} page`}
                 >
-                    <div className="bg-primary  shadow hover:bg-primary/80 rounded-full p-3 ">
+                    <div className="bg-primary  shadow active:bg-primary/80 md:hover:bg-primary/80 rounded-full p-3 ">
                         <social.icon className="w-4 h-4  text-white" />
                     </div>
                 </Link>
