@@ -24,7 +24,7 @@ export default function MobileMenu() {
 
         <div className="navigation-mobile flex justify-center md:hidden">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
-                <SheetTrigger className="focus-visible:outline-none hover:bg-slate-100 rounded-md">
+                <SheetTrigger className="focus-visible:outline-none active:bg-slate-100 rounded-md">
                     <IoMenu className="h-7 w-7" />
                     <span className="sr-only">Menu</span>
                 </SheetTrigger>
@@ -38,10 +38,10 @@ export default function MobileMenu() {
                         </SheetHeader>
                     </div>
                     <div className="flex flex-col space-y-1 mt-6">
-                        <Link className="hover:bg-neutral-100 py-2 px-4" href="/about" onClick={handleLinkClick}>About</Link>
-                        <Link className="hover:bg-neutral-100 py-2 px-4" href="/experience" onClick={handleLinkClick}>Experience</Link>
-                        <Link className="hover:bg-neutral-100 py-2 px-4" href="/projects" onClick={handleLinkClick}>Projects</Link>
-                        <Link className="hover:bg-neutral-100 py-2 px-4" href="/blog" onClick={handleLinkClick}>Blog</Link>
+                        <Link className="active:bg-neutral-100 py-2 px-4" href="/about" onClick={handleLinkClick}>About</Link>
+                        <Link className="active:bg-neutral-100 py-2 px-4" href="/experience" onClick={handleLinkClick}>Experience</Link>
+                        <Link className="active:bg-neutral-100 py-2 px-4" href="/projects" onClick={handleLinkClick}>Projects</Link>
+                        <Link className="active:bg-neutral-100 py-2 px-4" href="/blog" onClick={handleLinkClick}>Blog</Link>
                     </div>
                     <div className="mt-12"><Link href="/contact" onClick={handleLinkClick}>
                         <Button size="lg" className="text-base w-full">Contact <IoMailOutline /></Button>
