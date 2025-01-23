@@ -10,7 +10,7 @@ export default function Home() {
 
       <div className="avatar flex justify-center">
         <Avatar className="w-24 h-24 md:w-32 md:h-32">
-          <AvatarImage src="/avatar.jpg" />
+          <AvatarImage src="/avatar.jpg" alt="Harry Northam" />
           <AvatarFallback>HN</AvatarFallback>
         </Avatar>
       </div>
