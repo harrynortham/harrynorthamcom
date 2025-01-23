@@ -71,71 +71,73 @@ export function ContactForm() {
 
     return (
         <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-                {submitSuccess && (
-                    <Alert>
-                        <CircleCheck className="h-4 w-4" />
-                        <AlertTitle>Success</AlertTitle>
-                        <AlertDescription>
-                            {submitSuccess}
-                        </AlertDescription>
-                    </Alert>
-                )}
-                <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                        <FormItem>
-                            <FormControl>
-                                <Input placeholder="Name" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                        </FormItem>
+            {submitSuccess ? (
+                <Alert>
+                    <CircleCheck className="h-4 w-4" />
+                    <AlertTitle>Success</AlertTitle>
+                    <AlertDescription>
+                        {submitSuccess}
+                    </AlertDescription>
+                </Alert>
+            ) : (
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                    {/* Your existing form fields */}
+                    <FormField
+                        control={form.control}
+                        name="name"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormControl>
+                                    <Input placeholder="Name" {...field} />
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+                    <FormField
+                        control={form.control}
+                        name="email"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormControl>
+                                    <Input placeholder="Email address" {...field} />
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+                    <FormField
+                        control={form.control}
+                        name="message"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormControl>
+                                    <Textarea placeholder="Message" {...field} />
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+                    {/* Other form fields... */}
+                    {submitError && (
+                        <Alert variant="destructive">
+                            <AlertCircle className="h-4 w-4" />
+                            <AlertTitle>Error</AlertTitle>
+                            <AlertDescription>
+                                {submitError}
+                            </AlertDescription>
+                        </Alert>
                     )}
-                />
-                <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                        <FormItem>
-                            <FormControl>
-                                <Input placeholder="Email address" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                        </FormItem>
-                    )}
-                />
-                <FormField
-                    control={form.control}
-                    name="message"
-                    render={({ field }) => (
-                        <FormItem>
-                            <FormControl>
-                                <Textarea placeholder="Message" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                        </FormItem>
-                    )}
-                />
-                {submitError && (
-                    <Alert variant="destructive">
-                        <AlertCircle className="h-4 w-4" />
-                        <AlertTitle>Error</AlertTitle>
-                        <AlertDescription>
-                            {submitError}
-                        </AlertDescription>
-                    </Alert>
-
-                )}
-                <Button
-                    type="submit"
-                    className="w-full text-base"
-                    size="lg"
-                    disabled={isSubmitting}
-                >
-                    {isSubmitting ? "Submitting..." : "Submit"}
-                </Button>
-            </form>
+                    <Button
+                        type="submit"
+                        className="w-full text-base"
+                        size="lg"
+                        disabled={isSubmitting}
+                    >
+                        {isSubmitting ? "Submitting..." : "Submit"}
+                    </Button>
+                </form>
+            )}
         </Form>
     )
 }
