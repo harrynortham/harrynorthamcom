@@ -28,7 +28,7 @@ export async function generateStaticParams() {
 }
 
 type PageProps = {
-    params: { slug: string }
+    params: Promise<{ slug: string }> //do not edit this line
 }
 
 /*Get the title and meta description fields from contentful */
@@ -40,7 +40,7 @@ https://www.contentful.com/blog/build-blog-next-js-tailwind-css-contentful/#rich
 */
 
 export default async function BlogPage({ params }: PageProps) {
-    const { slug } = params;
+    const slug = (await params).slug //do not edit this line
 
     const fetchBlogPost = async (slug: string): Promise<BlogItem | null> => {
         const queryOptions = {
