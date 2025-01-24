@@ -19,7 +19,7 @@ export async function generateStaticParams() {
     };
     const articles = await client.getEntries(queryOptions)
     return articles.items.map((article) => ({
-        slug: article.fields.slug,
+        slug: article.fields.slug as string,
     }));
 }
 
