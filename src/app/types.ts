@@ -1,5 +1,5 @@
-/* types.ts */
 import { Document } from "@contentful/rich-text-types";
+import { Asset } from "contentful";
 
 export type BlogItem = {
   fields: {
@@ -7,8 +7,10 @@ export type BlogItem = {
     slug?: string;
     date?: Date;
     content?: Document;
+    featuredImage?: Asset; // Add this line
   };
 };
+
 export type BlogItems = ReadonlyArray<BlogItem>;
 
 export type BlogQueryResult = {

@@ -80,7 +80,7 @@ export function ContactForm() {
                     </AlertDescription>
                 </Alert>
             ) : (
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                     {/* Your existing form fields */}
                     <FormField
                         control={form.control}

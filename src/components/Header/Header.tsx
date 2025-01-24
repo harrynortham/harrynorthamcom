@@ -18,7 +18,7 @@ export default function Header() {
     ];
 
     return (
-        <div className="header">
+        <div className="header mb-6">
             <div className="mx-auto max-w-7xl p-4 flex justify-between">
                 <div
                     className={`${poetsenone.className} logo font-extrabold text-xl flex justify-center`}

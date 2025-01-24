@@ -19,7 +19,7 @@ export default function Home() {
         <div className="description  text-pretty mb-4">A web developer in Gibraltar with high level experience in Front-End within the iGaming industry. Producing quality work,  <span className="highlight bg-yellow-100 px-0.5">crafting digital journeys</span> that captivate users.  </div>
         <div className="role text-balance mb-6">Currently working at <Link target="_blank" rel="noopener" className="underline" href="https://digibeat.com/">DigitalBeat</Link> as Senior Web Operations Manager.</div>
 
-        <Link href="/contact"><Button size="lg" className=" text-base">Contact</Button></Link>
+        <Link href="/blog"><Button size="lg" className=" text-base">Read blog</Button></Link>
       </div>
 
 
