@@ -4,7 +4,9 @@ import { Asset } from "contentful";
 export type BlogItem = {
   fields: {
     title?: string;
+    metaDescription?: string;
     slug?: string;
+    snippet?: string;
     date?: Date;
     content?: Document;
     featuredImage?: Asset; // Add this line

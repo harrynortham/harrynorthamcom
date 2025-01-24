@@ -6,6 +6,7 @@ import { BlogQueryResult } from "@/app/types";
 import { createClient } from "contentful";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 
 export const metadata: Metadata = {
@@ -72,7 +73,7 @@ export default async function Blog({
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
                 {blogEntries.items.map((singlePost) => {
-                    const { slug, title, date, featuredImage } = singlePost.fields;
+                    const { slug, title, snippet, date, featuredImage } = singlePost.fields;
                     return (
 
                         <Link key={slug} href={`/blog/${slug}`} className="flex flex-col">
@@ -90,9 +91,13 @@ export default async function Blog({
                                     <CardTitle><h2 className={`${poetsenone.className} text-xl `}>{title}</h2></CardTitle>
                                 </CardHeader>
                                 <CardContent className="flex-grow">
-                                    {<p>the content</p>}
+                                    {<p>{snippet}</p>}
                                 </CardContent>
                                 <CardFooter>
+                                    <Avatar className="w-8 h-8 mr-4">
+                                        <AvatarImage src="/avatar.webp" alt="Harry Northam" />
+                                        <AvatarFallback>HN</AvatarFallback>
+                                    </Avatar>
                                     <p className="text-sm text-muted-foreground">
                                         Posted on{" "}
                                         {date && new Date(date).toLocaleDateString("en-US", {
