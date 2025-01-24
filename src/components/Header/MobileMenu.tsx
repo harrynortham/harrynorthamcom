@@ -1,7 +1,6 @@
 'use client'
 import React, { useState } from 'react';
 import Link from "next/link";
-import { Button } from "../ui/button";
 import {
     Sheet,
     SheetContent,
@@ -12,6 +11,7 @@ import {
 } from "@/components/ui/sheet"
 import { IoMenu } from "react-icons/io5";
 import { poetsenone } from '@/components/ui/fonts';
+import { usePathname } from 'next/navigation';
 
 
 export default function MobileMenu() {
@@ -20,6 +20,17 @@ export default function MobileMenu() {
     const handleLinkClick = () => {
         setIsOpen(false);
     };
+
+    const pathname = usePathname();
+
+    const navItems = [
+        { href: "/about", label: "About" },
+        { href: "/experience", label: "Experience" },
+        { href: "/projects", label: "Projects" },
+        { href: "/blog", label: "Blog" },
+        { href: "/contact", label: "Contact" }
+    ];
+
     return (
 
         <div className="navigation-mobile flex justify-center md:hidden">
@@ -38,14 +49,13 @@ export default function MobileMenu() {
                         </SheetHeader>
                     </div>
                     <div className="flex flex-col space-y-1 mt-6">
-                        <Link className="active:bg-neutral-100 py-2 px-4" href="/about" onClick={handleLinkClick}>About</Link>
-                        <Link className="active:bg-neutral-100 py-2 px-4" href="/experience" onClick={handleLinkClick}>Experience</Link>
-                        <Link className="active:bg-neutral-100 py-2 px-4" href="/projects" onClick={handleLinkClick}>Projects</Link>
-                        <Link className="active:bg-neutral-100 py-2 px-4" href="/blog" onClick={handleLinkClick}>Blog</Link>
+
+                        {navItems.map((item) => (
+                            <Link key={item.href} href={item.href} className={pathname === item.href ? " bg-neutral-100 active:bg-neutral-100 py-2 px-4" : "active:bg-neutral-100 py-2 px-4"} onClick={handleLinkClick}>{item.label}</Link>
+                        ))}
+
                     </div>
-                    <div className="mt-12"><Link href="/contact" onClick={handleLinkClick}>
-                        <Button size="lg" className="text-base w-full">Contact</Button>
-                    </Link></div>
+
                     <div
                         className={`${poetsenone.className} font-extrabold text-xl flex justify-center mt-12`}
                     >{'<Northam />'}</div>

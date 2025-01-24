@@ -5,15 +5,16 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa6";
-
+import { FaLinkedinIn } from "react-icons/fa";
 
 const socialLinks = [
+    { name: "LinkedIn", icon: FaLinkedinIn, url: "https://www.linkedin.com/in/harrynortham" },
+    { name: "GitHub", icon: FaGithub, url: "https://www.github.com/harrynortham" },
+    { name: "X", icon: FaXTwitter, url: "https://x.com/harrynortham" },
     { name: "Facebook", icon: FaFacebookF, url: "https://www.facebook.com/harrynortham" },
     { name: "Instagram", icon: FaInstagram, url: "https://www.instagram.com/harrynorthamcom/" },
-    { name: "X", icon: FaXTwitter, url: "https://x.com/harrynortham" },
-    { name: "YouTube", icon: FaYoutube, url: "https://www.youtube.com/@harrynortham" },
     { name: "TikTok", icon: FaTiktok, url: "https://tiktok.com/@harrynorthamcom" },
-    { name: "GitHub", icon: FaGithub, url: "https://www.github.com/harrynortham" },
+    { name: "YouTube", icon: FaYoutube, url: "https://www.youtube.com/@harrynortham" },
 ]
 
 export default function Social() {
