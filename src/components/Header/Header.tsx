@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { usePathname } from 'next/navigation';
-import { poetsenone } from '@/components/ui/fonts';
 import MobileMenu from "./MobileMenu";
 
 export default function Header() {
@@ -21,7 +20,7 @@ export default function Header() {
         <div className="header mb-6 sticky top-0 z-50  bg-white/75 backdrop-blur-md">
             <div className="mx-auto max-w-7xl p-4 flex justify-between">
                 <div
-                    className={`${poetsenone.className} logo font-extrabold text-xl flex justify-center`}
+                    className="font-poetsen logo font-extrabold text-xl flex justify-center"
                 >
                     <Link href="/">{'<Northam />'}</Link>
                 </div>

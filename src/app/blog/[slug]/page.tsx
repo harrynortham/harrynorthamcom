@@ -2,7 +2,6 @@ import { createClient } from "contentful";
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { notFound } from 'next/navigation';
 import { BlogItem } from "@/app/types";
-import { poetsenone } from '@/components/ui/fonts';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import Image from "next/image";
 import type { Metadata } from "next";
@@ -98,7 +97,7 @@ export default async function BlogPage({ params }: PageProps) {
 
     return (
         <div className="container mx-auto max-w-3xl px-4 flex-1 flex flex-col justify-center">
-            <h1 className={`${poetsenone.className} text-4xl text-center mb-4`}>{title}</h1>
+            <h1 className="font-poetsen text-4xl text-center mb-4">{title}</h1>
             <div className="blog-info flex justify-center mb-6">
                 <Avatar className="w-8 h-8 mr-4">
                     <AvatarImage src="/avatar.webp" alt="Harry Northam" />
@@ -129,7 +128,7 @@ export default async function BlogPage({ params }: PageProps) {
             {/* As we cannot access the elements in content with tailwind */
                 /* Tailwind allows us target children of an element with special selector */
             }
-            <div className="[&>p]:mb-8 [&>h2]:font-extrabold">
+            <div className="[&>p]:mb-8 [&>h2]:font-extrabold [&>h2]:font-poetsen [&>h3]:font-poetsen [&>h4]:font-poetsen">
                 {content ? documentToReactComponents(content) : "No content available"}
             </div>
         </div >

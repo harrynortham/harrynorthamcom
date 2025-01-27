@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { poetsenone } from '@/components/ui/fonts';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "next/link";
 import { BlogQueryResult } from "@/app/types";
@@ -68,7 +67,7 @@ export default async function Blog({
 
     return (
         <div className="container mx-auto max-w-7xl px-4 flex-1 flex flex-col justify-center">
-            <h1 className={`${poetsenone.className} text-4xl mb-4 text-center`}>Blog</h1>
+            <h1 className="font-poetsen text-4xl mb-4 text-center">Blog</h1>
             <p className='mb-12 text-center'>From debugging nightmares to deployment dreams, I share my journey navigating the ever-evolving landscape of web development.</p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
@@ -88,7 +87,7 @@ export default async function Blog({
                                     />
                                 )}
                                 <CardHeader>
-                                    <CardTitle><h2 className={`${poetsenone.className} text-xl `}>{title}</h2></CardTitle>
+                                    <CardTitle><h2 className="font-poetsen text-xl">{title}</h2></CardTitle>
                                 </CardHeader>
                                 <CardContent className="flex-grow">
                                     {<p>{snippet}</p>}

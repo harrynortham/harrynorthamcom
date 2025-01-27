@@ -10,7 +10,6 @@ import {
     SheetTrigger,
 } from "@/components/ui/sheet"
 import { IoMenu } from "react-icons/io5";
-import { poetsenone } from '@/components/ui/fonts';
 import { usePathname } from 'next/navigation';
 
 
@@ -24,10 +23,10 @@ export default function MobileMenu() {
     const pathname = usePathname();
 
     const navItems = [
-        { href: "/about", label: "About" },
-        { href: "/experience", label: "Experience" },
-        { href: "/projects", label: "Projects" },
         { href: "/blog", label: "Blog" },
+        { href: "/experience", label: "Experience" },
+        { href: "/about", label: "About" },
+        { href: "/projects", label: "Projects" },
         { href: "/contact", label: "Contact" }
     ];
 
@@ -57,7 +56,7 @@ export default function MobileMenu() {
                     </div>
 
                     <div
-                        className={`${poetsenone.className} font-extrabold text-xl flex justify-center mt-12`}
+                        className="font-poetsen font-extrabold text-xl flex justify-center mt-12"
                     >{'<Northam />'}</div>
                 </SheetContent>
             </Sheet>
