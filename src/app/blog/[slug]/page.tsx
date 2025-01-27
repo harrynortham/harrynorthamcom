@@ -11,9 +11,12 @@ const client = createClient({
     accessToken: process.env.ACCESS_TOKEN!,
 });
 
-/* ADD TWITTER INFOGRAPH TO BLOG POSTS FOR SEO */
 
-/* NEED TO SETUP A WEBHOOK IN CONTENTFUL AND VERCEL TO DEPLOY ON UPDATE https://www.contentful.com/blog/build-blog-next-js-tailwind-css-contentful/#richtxt-setting-up-a-webhook */
+
+/* SETUP A WEBHOOK IN CONTENTFUL AND VERCEL TO DEPLOY ON UPDATE https://www.contentful.com/blog/build-blog-next-js-tailwind-css-contentful/#richtxt-setting-up-a-webhook */
+
+/* we will use generateStaticParams in combination with dynamic routes to statically generate the pages at build time 
+https://www.contentful.com/blog/build-blog-next-js-tailwind-css-contentful/#richtxt-generatestaticparams */
 
 export async function generateStaticParams() {
     const queryOptions = {
@@ -56,6 +59,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
     const { title, metaDescription, featuredImage } = article.fields;
 
+    /* ADD TWITTER INFOGRAPH TO BLOG POSTS FOR SEO */
+
     return {
         title: title || 'Blog Post',
         description: metaDescription || 'A blog post from our website',
@@ -66,11 +71,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 
-/*Add the pages to the nextjs sitemap */
-
-/* we will use generateStaticParams in combination with dynamic routes to statically generate the pages at build time 
-https://www.contentful.com/blog/build-blog-next-js-tailwind-css-contentful/#richtxt-generatestaticparams
-*/
 
 export default async function BlogPage({ params }: PageProps) {
     const slug = (await params).slug //do not edit this line
@@ -128,7 +128,7 @@ export default async function BlogPage({ params }: PageProps) {
             {/* As we cannot access the elements in content with tailwind */
                 /* Tailwind allows us target children of an element with special selector */
             }
-            <div className="[&>p]:mb-8 [&>h2]:font-extrabold [&>h2]:font-poetsen [&>h3]:font-poetsen [&>h4]:font-poetsen">
+            <div className="[&>p]:mb-8 [&>h2]:font-poetsen [&>h3]:font-poetsen [&>h4]:font-poetsen">
                 {content ? documentToReactComponents(content) : "No content available"}
             </div>
         </div >

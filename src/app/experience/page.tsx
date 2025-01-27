@@ -28,9 +28,9 @@ export default function Experience() {
     ];
 
     return (
-        <div className="mx-auto max-w-7xl px-4 text-center flex-1 flex flex-col justify-center">
+        <div className="mx-auto max-w-7xl px-4 flex-1 flex flex-col justify-center">
             <div className="intro-text py-8 max-w-2xl">
-                <h1 className="font-poetsen text-4xl mb-4">Experience</h1>
+                <h1 className="font-poetsen text-4xl mb-4 text-center">Experience</h1>
                 <p className="mb-8">With over 12 years of experience in the web industry, I&apos;ve worked on products that are used by millions globally. Below you&apos;ll find the key roles that have shaped my technical expertise.</p>
 
                 <div className="timeline mb-8 relative py-4">
@@ -50,7 +50,7 @@ export default function Experience() {
                                     <div className="flex">
                                         <div className="pl-1 font-poetsen">{item.date}  </div>
 
-                                        <div className="flex-1 pl-3 md:pl-6 text-left">{item.title}  {item.description}</div>
+                                        <div className="flex-1 pl-3 md:pl-6 ">{item.title}  {item.description}</div>
 
                                     </div>
                                 </div>

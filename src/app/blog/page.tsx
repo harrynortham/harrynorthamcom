@@ -113,7 +113,7 @@ export default async function Blog({
                 })}
             </div>
 
-            <div className="flex justify-center space-x-4 mt-10 mb-4">
+            <div className="flex justify-center space-x-4 mt-6 mb-8">
                 {page > 1 && (
                     <Link href={`/blog?page=${page - 1}`}>
                         <Button size="lg" className="text-base">Previous</Button>
