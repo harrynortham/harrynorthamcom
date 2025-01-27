@@ -1,10 +1,9 @@
 import type { Metadata } from "next"
-import "./globals.css"
-import Header from "@/components/Header"
-import Footer from "@/components/Footer"
 import { GoogleAnalytics } from "@next/third-parties/google"
 import { Roboto } from 'next/font/google'
-
+import Header from "@/components/Header"
+import Footer from "@/components/Footer"
+import "./globals.css"
 
 const roboto = Roboto({
   weight: '400',
