@@ -5,7 +5,7 @@ import { BlogItem } from "@/app/types";
 import { poetsenone } from '@/components/ui/fonts';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import Image from "next/image";
-
+import type { Metadata } from "next";
 
 const client = createClient({
     space: process.env.SPACE_ID!,
@@ -32,6 +32,40 @@ type PageProps = {
 }
 
 /*Get the title and meta description fields from contentful */
+
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+    const slug = (await params).slug //do not edit this line
+
+    const fetchBlogPost = async (slug: string): Promise<BlogItem | null> => {
+        const queryOptions = {
+            content_type: "blogPost",
+            "fields.slug[match]": slug,
+        };
+        const queryResult = await client.getEntries(queryOptions);
+        return queryResult.items.length > 0 ? queryResult.items[0] : null;
+    };
+
+    const article = await fetchBlogPost(slug);
+
+    if (!article) {
+        return {
+            title: 'Blog Post Not Found',
+            description: 'The requested blog post could not be found.'
+        };
+    }
+
+    const { title, metaDescription, featuredImage } = article.fields;
+
+    return {
+        title: title || 'Blog Post',
+        description: metaDescription || 'A blog post from our website',
+        openGraph: featuredImage?.fields?.file ? {
+            images: [`https:${featuredImage.fields.file.url}`]
+        } : undefined
+    };
+}
+
 
 /*Add the pages to the nextjs sitemap */
 
